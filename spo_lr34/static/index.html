@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/lll.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
+    <title>SPO</title>
+</head>
+
+<body class="container">
+    <header>
+        <div class="title__up">
+            <div class="title_db">Системное программное обеспечение</div>
+        </div>
+        <br>
+
+
+    </header>
+    <div class="title__up">
+            <div class="title_db">Термины</div>
+        </div>
+        <div class = "row">
+            <div class="col d-flex justify-content-around" id="id">id</div>
+            <div class="col d-flex justify-content-around" id="value">Термин</div>
+            <div class="col d-flex justify-content-around" id="description">Описание</div>
+            <div class="col d-flex justify-content-around" id="act">Действие</div>
+        </div>
+    <br>
+
+
+    <div class="data">
+        <div id='data'></div>
+    </div>
+    <br>
+
+    <div class="title__up">
+        <div class="title_db">Связи терминов</div>
+    </div>
+        <div class = "row">
+        <div class="col d-flex justify-content-around" id="link_id">№</div>
+        <div class="col d-flex justify-content-around" id="source">Главный термин</div>
+        <div class="col d-flex justify-content-around" id="target">Зависимый термин</div>
+        <div class="col d-flex justify-content-around" id="description">Вид связи</div>
+    </div>
+    <div class="data_link">
+        <div id="data_link"></div>
+    </div>
+    <br>
+
+    <div class="title__up">
+        <div class="title_db">Виды связей в DFD</div>
+    </div>
+    </div>
+        <div class = "row">
+        <div class="col d-flex justify-content-around" id="type_id">№</div>
+        <div class="col d-flex justify-content-around" id="type_name">Название</div>
+        <div class="col d-flex justify-content-around" id="source_name">Отношение к зависимому понятию</div>
+        <div class="col d-flex justify-content-around" id="target_name">Отношение к главному понятию</div>
+    </div>
+    <div class="all_types">
+        <div id="all_types"></div>
+    </div>
+    <footer>
+        <div class="f_logo">
+            <a href="index.html"><img class="f_logo" src="img/footer.png" alt="ETERNITY ENTERTAINMENT"></a>
+        </div>
+        <p>© ETERNITY ENTERTAINMENT, 2022. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</p>
+    </footer>
+
+    <div id="form_update"class="form">
+        <div class="title_form">Редактирование записи</div>
+        <form method="post" class="form_body" action="/update_entry">
+            <div class="form__item__id" style="display: none;">
+                <input class="form__input" type="text" name="id" value="" />
+            </div>
+            <div class="form__item" style="display: none;">
+                <input class="form__input" type="text" name="value" value="" />
+            </div>
+            <div class="form__item">
+                <input class="form__input" placeholder="Описание" type="text" name="description" value="" autocomplete="off"/>
+            </div>
+            <button class="form__button" type="submit">Обновить</button>
+        </form>
+    </div>
+    <div id="form_link"class="form">
+        <div class="title_form">Связи данного термина</div>
+        <div id="one_link"></div>
+    </div>
+</body>
+</html>
